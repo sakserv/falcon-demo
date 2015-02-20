@@ -9,4 +9,5 @@ echo -e "\n###  Installing falcon workflow dependencies to $HDFS_FALCON_APPS_ROO
 if [ ! hdfs dfs -test $HDFS_FALCON_APPS_ROOT ]; then
   hdfs dfs -mkdir -p $HDFS_FALCON_APPS_ROOT
 fi
-hdfs dfs -copyFromLocal $RES_PATH/hdfs/apps/falcon/* $HDFS_FALCON_APPS_ROOT/
+hdfs dfs -copyFromLocal $RES_PATH/hdfs/apps/falcon/oozie $HDFS_FALCON_APPS_ROOT/
+hdfs dfs -copyFromLocal $RES_PATH/hdfs/apps/falcon/pig $HDFS_FALCON_APPS_ROOT/
