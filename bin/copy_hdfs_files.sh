@@ -6,7 +6,7 @@ HDFS_FALCON_APPS_ROOT=/apps/falcon
 
 # Copy files into $HDFS_FALCON_APPS_ROOT
 echo -e "\n###  Installing falcon workflow dependencies to $HDFS_FALCON_APPS_ROOT"
-if [ ! hdfs dfs -test $HDFS_FALCON_APPS_ROOT ]; then
+if ! hdfs dfs -test -e $HDFS_FALCON_APPS_ROOT; then
   hdfs dfs -mkdir -p $HDFS_FALCON_APPS_ROOT
 fi
 hdfs dfs -copyFromLocal $RES_PATH/hdfs/apps/falcon/oozie $HDFS_FALCON_APPS_ROOT/
