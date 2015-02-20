@@ -23,6 +23,6 @@
         <location type="meta" path="/none"/>
     </locations>
 
-    <ACL owner="hdfs" group="hadoop" permission="0755"/>
+    <ACL owner="falcon" group="hadoop" permission="0755"/>
     <schema location="/none" provider="none"/>
 </feed>

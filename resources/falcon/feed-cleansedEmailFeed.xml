@@ -38,6 +38,6 @@
                   path="/data/prodCluster/processed/enron/${YEAR}-${MONTH}-${DAY}-${HOUR}"/>
     </locations>
 
-    <ACL owner="hdfs" group="hadoop" permission="0755"/>
+    <ACL owner="falcon" group="hadoop" permission="0755"/>
     <schema location="/none" provider="none"/>
 </feed>

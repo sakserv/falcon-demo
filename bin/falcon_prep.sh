@@ -30,9 +30,31 @@ if hdfs dfs -test -d $PROD_HDFS_ROOT; then
 fi
 hdfs dfs -mkdir -p $PROD_HDFS_ROOT
 
+# Staging Dir
+hdfs dfs -mkdir -p $PROD_HDFS_ROOT/staging
+hdfs dfs -chmod -R 777 $PROD_HDFS_ROOT/staging
+
+# Working dir
+hdfs dfs -mkdir -p $PROD_HDFS_ROOT/working
+hdfs dfs -chmod -R 755 $PROD_HDFS_ROOT/working
+
+# Change ownership of $PROD_HDFS_ROOT
+hdfs dfs -chown -R falcon:hadoop $PROD_HDFS_ROOT
+
 # Setup the dr cluster HDFS location
 echo -e "\n### Creating $DR_HDFS_ROOT for DR workflows"
 if hdfs dfs -test -d $DR_HDFS_ROOT; then
   hdfs dfs -rm -r $DR_HDFS_ROOT
 fi
 hdfs dfs -mkdir -p $DR_HDFS_ROOT
+
+# Staging Dir
+hdfs dfs -mkdir -p $DR_HDFS_ROOT/staging
+hdfs dfs -chmod -R 777 $DR_HDFS_ROOT/staging
+
+# Working dir
+hdfs dfs -mkdir -p $DR_HDFS_ROOT/working
+hdfs dfs -chmod -R 755 $DR_HDFS_ROOT/working
+
+# Change ownership of $DR_HDFS_ROOT
+hdfs dfs -chown -R falcon:hadoop $DR_HDFS_ROOT
