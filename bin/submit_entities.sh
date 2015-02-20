@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export PATH=$PATH:/usr/lib/falcon/bin/
 DL_PATH=/tmp/falcon-demo
 RES_PATH=$DL_PATH/resources
 
