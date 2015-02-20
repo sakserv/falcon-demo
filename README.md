@@ -22,3 +22,13 @@ su - hdfs -c "cd /tmp/falcon-demo && bash -x bin/falcon_prep.sh"
 ```
 su - falcon -c "cd /tmp/falcon-demo && bash -x bin/submit_entities.sh"
 ```
+
+* Schedule the raw workflow
+```
+su - falcon -c "cd /tmp/falcon-demo && bash -x bin/schedule_raw_workflow.sh"
+```
+
+* Schedule the cleansed workflow
+```
+su - falcon -c "cd /tmp/falcon-demo && bash -x bin/schedule_cleansed_workflow.sh"
+```
