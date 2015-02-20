@@ -30,8 +30,6 @@
             <exec>ingest.sh</exec>
             <argument>${feedInstancePaths}</argument>
             <file>${wf:appPath()}/ingest.sh#ingest.sh</file>
-            <!-- <file>/tmp/ingest.sh#ingest.sh</file> -->
-            <!-- <capture-output/> -->
         </shell>
         <ok to="end"/>
         <error to="fail"/>
