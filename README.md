@@ -22,3 +22,13 @@ cd /tmp && git clone https://github.com/sakserv/falcon-demo.git
 ```
 cd /tmp/falcon-demo && bash -x bin/falcon_prep.sh
 ```
+
+* Switch to the falcon user:
+```
+su - falcon (or sudo su - falcon)
+```
+
+* Submit the entity definitions
+```
+cd /tmp/falcon-demo && bash -x bin/submit_entities.sh
+```
