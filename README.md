@@ -13,7 +13,6 @@ The following outlines how to use this project.
 su - hdfs (or sudo su - hdfs)
 ```
 
-```
 * Clone the repo:
 ```
 cd /tmp && git clone https://github.com/sakserv/falcon-demo.git
