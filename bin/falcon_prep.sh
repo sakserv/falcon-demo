@@ -4,6 +4,9 @@ DL_PATH=/tmp/falcon-demo
 RES_PATH=$DL_PATH/resources
 HDFS_FALCON_APPS_ROOT=/apps/falcon
 
+PROD_HDFS_ROOT=/data/prodCluster
+DR_HDFS_ROOT=/data/drCluster
+
 # Check that we are running hdfs
 if [ $(id -un) != "hdfs" ]; then
   echo "ERROR: Must run as hdfs"
@@ -19,3 +22,17 @@ fi
 hdfs dfs -mkdir -p $HDFS_FALCON_APPS_ROOT
 hdfs dfs -copyFromLocal $RES_PATH/hdfs/apps/falcon/oozie $HDFS_FALCON_APPS_ROOT/
 hdfs dfs -copyFromLocal $RES_PATH/hdfs/apps/falcon/pig $HDFS_FALCON_APPS_ROOT/
+
+# Setup the production cluster HDFS location
+echo -e "\n### Creating $PROD_HDFS_ROOT for production workflows"
+if hdfs dfs -test -d $PROD_HDFS_ROOT; then
+  hdfs dfs -rm -r $PROD_HDFS_ROOT
+fi
+hdfs dfs -mkdir -p $PROD_HDFS_ROOT
+
+# Setup the dr cluster HDFS location
+echo -e "\n### Creating $DR_HDFS_ROOT for DR workflows"
+if hdfs dfs -test -d $DR_HDFS_ROOT; then
+  hdfs dfs -rm -r $DR_HDFS_ROOT
+fi
+hdfs dfs -mkdir -p $DR_HDFS_ROOT

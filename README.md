@@ -18,7 +18,7 @@ su - hdfs (or sudo su - hdfs)
 cd /tmp && git clone https://github.com/sakserv/falcon-demo.git
 ```
 
-* Populate HDFS with the necessary files
+* Populate HDFS with the necessary files and directories
 ```
-cd /tmp/falcon-demo && bash -x bin/copy_hdfs_files.sh
+cd /tmp/falcon-demo && bash -x bin/falcon_prep.sh
 ```
