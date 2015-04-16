@@ -6,7 +6,7 @@
       xmlns="uri:falcon:feed:0.1">
 
     <tags>externalSystem=USWestEmailServers,classification=secure</tags>
-    <groups>churnAnalysisDataPipeline</groups>
+    <groups>eDiscoveryEmailCleansePipeline</groups>
     <frequency>hours(1)</frequency>
     <late-arrival cut-off="hours(4)"/>
     <clusters>
