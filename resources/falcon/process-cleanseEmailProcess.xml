@@ -9,7 +9,7 @@
 
     <clusters>
         <cluster name="prodCluster">
-            <validity start="2014-02-28T00:00Z" end="2016-03-31T00:00Z"/>
+            <validity start="2014-02-28T00:00Z" end="2099-03-31T00:00Z"/>
         </cluster>
     </clusters>
 
