@@ -11,7 +11,7 @@
     <late-arrival cut-off="hours(4)"/>
     <clusters>
         <cluster name="prodCluster" type="source">
-            <validity start="2014-02-28T00:00Z" end="2016-03-31T00:00Z"/>
+            <validity start="2014-02-28T00:00Z" end="2099-03-31T00:00Z"/>
             <retention limit="days(90)" action="delete"/>
         </cluster>
     </clusters>
