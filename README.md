@@ -17,7 +17,10 @@ cd /tmp && git clone https://github.com/sakserv/falcon-demo.git
 ```
 su - hdfs -c "cd /tmp/falcon-demo && bash -x bin/falcon_prep.sh"
 ```
-
+* Modify cluster definitions if your hostname is not sandbox.hortonworks.com
+```
+vi /tmp/falcon-demo/resources/falcon/cluster*
+```
 * Submit the entity definitions
 ```
 su - falcon -c "cd /tmp/falcon-demo && bash -x bin/submit_entities.sh"
